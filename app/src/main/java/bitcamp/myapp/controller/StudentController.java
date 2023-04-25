@@ -29,10 +29,11 @@ public class StudentController {
 
   @Autowired private StudentService studentService;
   @Autowired private ObjectStorageService objectStorageService;
-  private String bucketName = "bitcamp-bucket28-member-photo";
+  private String bucketName = "bitcamp-bucket-57-member-photo";
 
   @PostMapping
   public Object insert(Student student, MultipartFile file) {
+    //두번째 매개변수 빈칸은 스토리지 루트폴더에 바로 올리겠다
     String filename = objectStorageService.uploadFile(bucketName, "", file);
     if (filename != null) {
       student.setPhoto(filename);
