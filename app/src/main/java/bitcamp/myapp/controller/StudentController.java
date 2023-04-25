@@ -29,6 +29,7 @@ public class StudentController {
 
   @Autowired private StudentService studentService;
   @Autowired private ObjectStorageService objectStorageService;
+  //private String bucketName = "bitcamp-bucket28-member-photo";
   private String bucketName = "bitcamp-bucket-57-member-photo";
 
   @PostMapping
